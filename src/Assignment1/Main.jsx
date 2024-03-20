@@ -23,8 +23,9 @@ const Main = () => {
     }
 
     return (
-        <div>
-            <div style={{ paddingLeft: "2%" }}>
+        <div style={{border:"5px solid green",padding:"2%"}}>
+            <h1 style={{textAlign:"center", fontSize:"30px", margin:"0%"}}>Assignment 1</h1>
+            <div>
                 <label>Nation</label>
                 <br />
                 <select onChange={handleNationChange}>
@@ -36,20 +37,20 @@ const Main = () => {
                     })}
                 </select>
             </div>
-            <hr style={{ padding: "0%", border: "2px solid" }} />
-            <div style={{ paddingLeft: "2%" }}>
+            <hr style={{ padding: "0%", border: "1px solid" }} />
+            <div>
                 <h2 style={{ margin: "0%", fontFamily: "monospace" }}>ADD NEW VALUES</h2>
                 <div>
                     <label>Country Name:</label>
                     <br />
-                    <input type='textbox' value={countryName} onChange={(e) => { setCountryName(e.target.value) }} />
+                    <input type='text' value={countryName} onChange={(e) => { setCountryName(e.target.value) }} />
                 </div>
                 <div>
                     <label>Country Code:</label>
                     <br />
-                    <input type='textbox' value={countryCode} onChange={(e) => { setCountryCode(e.target.value) }} />
+                    <input type='text' value={countryCode} onChange={(e) => { setCountryCode(e.target.value) }} />
                 </div>
-                <button onClick={handleSubmit} disabled={countryCode.length === 0 || countryName.length === 0}>Submit</button>
+                <button style={{marginTop:"2%"}} onClick={handleSubmit} disabled={countryCode.length === 0 || countryName.length === 0}>Submit</button>
             </div>
         </div>
     );
